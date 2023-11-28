@@ -7,6 +7,7 @@ function Inputs({units, setUnits, setQuery}) {
 
   const hadleSearchClick = () =>{
   if (city !== '') setQuery({q: city})
+  setCity('')
   };
 
   const hadleUnitsChange = (e) =>{
@@ -31,8 +32,8 @@ function Inputs({units, setUnits, setQuery}) {
     <div className="flex flex-row justify-centermy-6">
       <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input
-        value={city}
-        onChange={(e) => setCity(e.currentTarget.value)}
+          value={city}
+          onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
           className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
           placeholder="Search for city..."

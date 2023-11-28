@@ -20,7 +20,7 @@ function App() {
     const message = query.q ? query.q : 'current location.'
     toast.info("Fetching weather for " + message);
 
-    await getFormattedWeatherData({...query, ...units})
+    await getFormattedWeatherData({...query, units: units})
     .then((data) => {
       toast.success(`Successfully fetched weather for ${data.name}, ${data.country}.`)
       setWeather(data);
@@ -31,8 +31,8 @@ function App() {
 
 const formatBackground = () => {
   if (!weather) return 'from-cyan-700'
-  const threshold = units === 'metric' ? 20:60
-  if(weather.temp <= threshold) return 'from-cyam-700 to-blue-700'
+  const threshold = (units === 'metric') ? 20 : 60
+  if(weather.temp <= threshold){ return 'from-cyan-700 to-blue-700'}
 
   return 'from-yellow-700 to-orange-700'
 }
@@ -42,7 +42,7 @@ if (!weather || weather===null) {
 }
 
   return (
-    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to to-blue-700 shadow-xl shadow-gray-400 ${formatBackground}`}>
+    <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery}/>
       <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
       {weather && 

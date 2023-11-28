@@ -12,12 +12,12 @@ function Forcast({title, items}) {
       <hr className="my-2"/>
       <div className="flex flex-row items-center justify-between text-white">
         {items.map((item) => (
-          <div key="" className="flex flex-col items-center justify-center">
+          <div key={`${item.title}`} className="flex flex-col items-center justify-center">
           <p className=" font-light text-sm">
             {item.title}
           </p>
           <img className='w-12 my1' src={iconUrlFromCode(item.icon)} alt="" />
-          <p className=" font-medium">`${item.temp}°`</p>
+          <p className=" font-medium">{item.temp}°</p>
         </div>
         ))}
       </div>
