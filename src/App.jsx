@@ -55,8 +55,8 @@ const backgroundStyle = (details === "Clouds" | "Squall" | "Tornado")
 : {backgroundImage: `url(${smoke})`}
 
   return (
-    <div className={`mx-auto max-w-screen mt-4 md:py-5 py-0 md:px-32 xsm:px-20 px-5 rounded shadow-md bg-cover bg-center bg-no-repeat`} style={backgroundStyle}>
-      <div className={`mx-auto max-w-screen-md mt-4 py-5 lg:px-32 md:px-20 px-3 xxsm:px-10 rounded shadow-md bg-cover bg-center bg-no-repeat`} style={{ backgroundColor: 'rgba(0, 123, 255, 0.3)' }}> {/* Cambios aquí */}
+    <div className={`min-h-screen mx-auto max-w-screen md:py-5 py-0 md:px-32 xsm:px-20 px-5  bg-cover bg-center bg-no-repeat`} style={backgroundStyle}>
+      <div className={`mx-auto max-w-screen-md py-5 lg:px-32 md:px-20 px-3 xxsm:px-10 rounded shadow-md bg-cover bg-center bg-no-repeat`} style={{ backgroundColor: 'rgba(0, 123, 255, 0.3)' }}> {/* Cambios aquí */}
         <TopButtons setQuery={setQuery}/>
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits} />
         {weather && 

@@ -32,7 +32,7 @@ function Inputs({units, setUnits, setQuery}) {
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
           type="text"
-          className="sm:text-xl xxsm:text-small text-xs font-bold w-full shadow-xl focus:outline-none capitalize rounded focus:border-2 focus:border-white"
+          className="sm:text-xl xxsm:text-small p-2 text-xs font-bold w-full shadow-xl focus:outline-none capitalize rounded focus:border-2 focus:border-white"
           placeholder="Search for city..."
         />
         <UilSearch size={35} onClick={hadleSearchClick} className="relative text-white cursor-pointer transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-125 hover:m-1 hover:p-1  font-semibold rounded-lg"/> 

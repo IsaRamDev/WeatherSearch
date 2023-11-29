@@ -8,3 +8,9 @@
     font-family: 'Nunito', sans-serif;
   }
 }
+
+@layer base {
+  html, body {
+    @apply min-h-screen m-0;
+  }
+}
